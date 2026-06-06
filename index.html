@@ -1,458 +1,247 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Resume</title>
-    <style type="text/css">
-        /* Sidebar (Left column) ko thoda breath do */
-td[bgcolor="#014C83"] {
-    padding-top: 40px !important;
-}
-
-/* Photo ke niche ka gap */
-img[src="Profile photo.jpeg"] {
-    margin-bottom: 20px;
-    border: 3px solid white; /* Photo ko pop dene ke liye */
-}
-
-/* Right Content (Column) spacing */
-td[bgcolor="#F4F6F7"] {
-    padding-left: 40px !important;
-}
-
-/* Headers ka spacing fix */
-h3.hd1 {
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-
-        .s1 {
-            list-style: disc;
-            color: white;
+    <meta charset="UTF-8">
+    <title>Himanshu Raj - Resume</title>
+    <style>
+        /* --- GLOBAL & ATS-FRIENDLY CSS --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
+            background-color: #525659; 
+            color: #333;
+            line-height: 1.5;
+        }
+        
+        /* A4 Page Setup */
+        .resume-container { 
+            width: 850px; 
+            min-height: 1100px;
+            background-color: #FFFFFF; 
+            margin: 20px auto; 
+            display: flex; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .tb1 {
-            color: white;
+        /* --- LEFT SIDEBAR --- */
+        .sidebar { 
+            width: 32%; 
+            background-color: #014C83; 
+            padding: 40px 25px; 
+            color: #F8FAFC; 
+        }
+        .profile-container { text-align: center; margin-bottom: 25px; }
+        .profile-img { 
+            width: 160px; height: 160px; 
+            border-radius: 50%; 
+            border: 3px solid #E2E8F0; 
+            object-fit: cover;
+        }
+        
+        .section-title-sidebar { 
+            font-size: 16px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            margin: 30px 0 15px 0;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #3B82F6; 
         }
 
-        .hd1 {
-            padding: 6px;
-            margin: 6px -10px;
-            color: white;
-        }
-
-        a:link,
-        a:visited {
+        .contact-info p, .contact-info a { 
+            font-size: 13px; 
+            margin-bottom: 8px; 
+            color: #E2E8F0; 
             text-decoration: none;
-            color: white;
+            display: block;
+        }
+        .contact-info a:hover { color: #60A5FA; }
+        .contact-label { font-size: 11px; color: #94A3B8; text-transform: uppercase; font-weight: 700; margin-top: 10px; display: block;}
+
+        .skills-list { list-style: none; font-size: 13px; }
+        .skills-list li { margin-bottom: 12px; line-height: 1.4; }
+        .skills-list b { color: #93C5FD; display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        .simple-list { list-style: none; font-size: 13px; }
+        .simple-list li { margin-bottom: 8px; position: relative; padding-left: 12px; }
+        .simple-list li::before { content: "•"; color: #3B82F6; position: absolute; left: 0; font-weight: bold;}
+
+        /* --- RIGHT CONTENT --- */
+        .content { 
+            width: 68%; 
+            padding: 45px 40px; 
+            background-color: #FFFFFF;
+        }
+        
+        .header h1 { font-size: 42px; font-weight: 900; color: #014C83; letter-spacing: 1px; margin-bottom: 4px; line-height: 1; }
+        .header h2 { font-size: 18px; font-weight: 600; color: #64748B; margin-bottom: 20px; }
+        
+        .summary { font-size: 14px; color: #475569; text-align: justify; margin-bottom: 30px; }
+
+        .section-title { 
+            font-size: 18px; 
+            font-weight: 800; 
+            color: #014C83; 
+            text-transform: uppercase; 
+            margin: 0 0 15px 0;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #E2E8F0; 
         }
 
-        .col {
-            color: #014C83;
-            font-family: arial;
-        }
+        /* Hero Project Specific Styling */
+        .hero-project { background-color: #F8FAFC; padding: 15px; border-radius: 8px; border-left: 4px solid #014C83; margin-bottom: 28px;}
+        .project-item { margin-bottom: 28px; } /* Increased spacing for readability */
+        
+        .item-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+        .item-title { font-size: 16px; font-weight: 800; color: #1E293B; }
+        .item-tech { font-size: 12px; font-weight: 700; color: #3B82F6; margin-bottom: 8px; }
+        .item-date { font-size: 13px; font-weight: 600; color: #64748B; }
+        
+        .bullet-points { font-size: 13.5px; color: #334155; padding-left: 18px; margin-top: 5px; }
+        .bullet-points li { margin-bottom: 8px; text-align: justify; } /* Increased bullet spacing */
 
-        .col1 {
-            color: #014C83;
-            font-family: arial;
-            font-size: 40px;
-            font-weight: bold;
-        }
-
-        #spacearea {
-            height: 30px;
-            width: 100%;
+        /* Print formatting */
+        @media print {
+            body { background-color: white; padding: 0; }
+            .resume-container { box-shadow: none; margin: 0; width: 100%; min-height: 100%;}
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
         }
     </style>
-
 </head>
-
 <body>
-    <table width="1050px" height="1200px" align="center" cellpadding="25px">
-        <tr>
-            <td width="30%" valign="top" bgcolor="#014C83">
-                <table cellspacing="0">
-                    <tr>
-                        <td align="center">
-                            <img src="Profile photo.jpeg" width="190px" style="border-radius: 50%"
-                                title="HIMANSHU.jpg" alt="loading"/>
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>
-                            <!-- <br />
-                            <hr color="#FFF" size="2px" >
-                            <h3 class="hd1"><u>Contact Me:</u></h3>
-                            
-                            <h3 class="hd1">Phone: 6202739979</h3>
-                            <a href="tel:6202739979" id="tx1"></a>
 
-                            <h3 class="hd1">Email:</h3>
-                            <a href="himanshu72846@gmail.com?subject=Query">himanshu72846@gmail.com</a> -->
-
-
-                            <!-- <h3 class="hd1">Address:</h3>
-                            <table class="tb1">
-                                <tr>
-                                    <td>VILL:-</td>
-                                    <td>SAPAMARAN</td>
-                                </tr>
-                                <tr>
-                                    <td>PO:-</td>
-                                    <td>SAPAMARAN</td>
-                                </tr>
-                                <tr>
-                                    <td>CITY:-</td>
-                                    <td>RAJDHANWAR</td>
-                                </tr>
-                                <tr>
-                                    <td>PINCODE:-</td>
-                                    <td>825412</td>
-                                </tr>
-                                <tr>
-                                    <td>DIST:-</td>
-                                    <td>GIRIDIH(JHARKHAND)</td>
-                                </tr>
-                            </table> -->
-
-                            <hr color="#FFF" size="2px" >
-
-                            <!-- <h3 class="hd1"><U>Online Profiles:</U></h3>
-                            <ul class="s1">
-                                <li><h4>LinkedIn:</h4><a href="www.linkedin.com/in/himanshu-raj-72846h">www.linkedin.com/in/himanshu-raj-72846h</a></li>
-                                <li><h4>GitHub:</h4><a href="github.com/himanshu4362">github.com/himanshu4362</a></li>
-                            </ul> -->
-
-                             <h3 class="hd1"><u>Technical Skills:</u></h3>
-                            <ul class="s1">
-                                <li style="margin-bottom: 8px;"><b>Frontend & Mobile:</b> React.js, TypeScript, Ionic, Capacitor, Tailwind CSS</li>
-                                <li style="margin-bottom: 8px;"><b>Backend:</b> Node.js, Express.js, REST APIs, JWT</li>
-                                <li style="margin-bottom: 8px;"><b>Database:</b> MongoDB Atlas, Mongoose, SQL</li>
-                                <li style="margin-bottom: 8px;"><b>Cloud & Tools:</b> AWS EC2, S3 (Presigned URLs), Route 53,  Docker, Git/GitHub, Vercel, Netlify, Render, CI/CD pipeline</li>
-                                <li style="margin-bottom: 8px;"><b>Core Concepts:</b> System Architecture, WebSockets, WebRTC, OOP</li>
-                            </ul>
-                            
-                            <hr size="2px" color="#FFF" />
-                            <h3 class="hd1"><u>Hobbies:</u></h3>
-                            <ul class="s1">
-                                <li>Playing Chess</li>
-                                <li>Cooking</li>
-                                <li>Calisthenics and home-based fitness</li>
-                                <li>Playing Badminton</li>
-                                <LI>Reading non-fiction and self-development books</LI>
-                                <li>Interest in human psychology and behavioral science</li>
-                                <li>Exploring new technologies and building software project</li>
-                            </ul>
-
-                            <hr size="2px" color="#FFF" />
-
-                            <h3 class="hd1"><u>Soft Skills:</u></h3>
-                            <ul class="s1">
-                                <li>Leadership Development Skills</li>
-                                <LI>Adaptive Nature</LI>
-                                <li>Good Communication Skill</li>
-                                <li>Punctual</li>
-                                <li>Self Motivated</li>
-                                <li>Decision Making</li>
-
-                            </ul>
-                            <br>
-                            <!-- <h3 class="hd1"><u>Technical Skills:</u></h3>
-                            <ul class="s1">
-                                <li>Python, java</li>
-                                <li>Full stack development and CI/CD pipeline.</li>
-                                <li>Frontend tech stack - React, html, css, js, tailwind.</li>
-                                <li>Backend (PHP , Node.js ,Express, MongoDB, SQL, WebSockets, WebRTC).</li>
-                                <li>Native App Development development (React, Ionic, Capacitor)</li>
-                                <li>Worked experience of <b>AWS</b> server and serverless (EC2 & Lambda), object storage AWS (Bucket), DNS Management (Route 53), good experience of remote server management.</li>
-                                <li>Strong Command on Computer networks, CHMA and other CS subjects</li>
-
-                            </ul> -->
-
-                           
-
-                            
-                            <h3 class="hd1"><U>Strengths:</U></h3>
-                                <ul class="s1">
-                                    <li>PUNCTUAL</1i>
-                                    <li>SELF MOTIVATED</li>
-                                    <li>DECISION MAKING</1i>
-                                </ul>
-                                <hr size="2px" color="#FFF" />
-
-                                <h3 class="hd1"><u>Declaration:</u></h3>
-                                <p class="tb1">I hereby declare that the above information is true to the best of my
-                                    knowledge.</p>
-                                <hr size="2px" color="#FFF" />
-                        </td>
-                    </tr>
-                </table>
-            </td>
-            <td width="70%" valign="top" bgcolor="#F4F6F7">
-                <P class="col1">HIMANSHU RAJ</p>
-                <P>full-Stack Web & Mobile Developer</P>
-                <p class="col">COMPUTER SCIENCE & ENGINEERING</p>
-                <p>Jamshedpur, Jharkhand | 6202739979 | himanshu72846@gmail.com</p>
-                <p>LinkedIn: linkedin.com/in/himanshu-raj-72846h | GitHub: github.com/himanshu4362</p>
-                <hr color="blue" size="2px" />
-                <h3 class="col"><u>Professional Summary</u></h3>
-                <p>Results-driven Full-Stack Web & Mobile Developer (MERN Stack, Ionic/Capacitor) in the final year of a Computer Science Diploma. Specialized in architecting scalable, enterprise-grade applications, cross-platform mobile solutions, and integrating cloud services (AWS). Passionate about writing clean, type-safe code and building real-world automation systems.</p>
-                <hr color="black" size="1px" />
-                
-                
-
-                <h3 class="col"><u>EDUCATIONAL QUALIFICATION</u></h3>
-                <!-- <table border="2px" cellspacing="0" width="100%">
-                    <tr align="center">
-                        <th>S.No</th>
-                        <th>Class</th>
-                        <th>Board/University</th>
-                        <th>School/Collage</th>
-                        <th>Passing Year</th>
-                        <th>Percentage</th>
-                    </tr>
-                    <tr align="center">
-                        <td>1.</td>
-                        <td>10<sup>th</sup></td>
-                        <td>JAC</td>
-                        <td>HIGH SCHOOL BADDIHA, JAMUA</td>
-                        <td>2023</td>
-                        <td>87.6%</td>
-                    </tr>
+<div class="resume-container">
     
-                </table> -->
-                <ul>
-                <li>10th Matriculation | High School Baddiha, Jamua (JAC Board) | 2023 | 87.6%</li>
-                <!-- <li>Diploma in Computer Science & Engineering | Government Polytechnic Adityapur, Jamshedpur | 2023 - 2026 | Aggregate: 79.33% (Up to 5th Sem)</li> -->
-                </ul>
-                
+    <!-- ================= LEFT SIDEBAR ================= -->
+    <div class="sidebar">
+        <div class="profile-container">
+            <img src="Profile photo.jpeg" class="profile-img" alt="Himanshu Raj">
+        </div>
 
+        <div class="contact-info">
+            <span class="contact-label">Contact</span>
+            <p>Jamshedpur, Jharkhand</p>
+            <p>+91 6202739979</p>
+            <a href="mailto:himanshu72846@gmail.com">himanshu72846@gmail.com</a>
 
-                <h3 class="col"><u>TECHNICAL QUALIFICATION</u></h3>
-                <p>Pursuing Diploma in<b> COMPUTER SCIENCE & ENGINEERING </b> from<b> GOVERNMENT POLYTECHNIC ADITYAPUR</b>
-                    (JAMSHEDPUR)<b> (2023-2026)</b></p>
-                <table border="1px" cellspacing="0">
-                    <tr align="center">
-                        <th>S.No</th>
-                        <th>Semester</th>
-                        <th>Board/University</th>
-                        <th>Institute</th>
-                        <th>Year of Passing</th>
-                        <th>SGPA</th>
-                        <th>Average of Marks</th>
-                    </tr>
-                    <tr align="center">
-                        <td>1</td>
-                        <td>1<sup>st</sup>Semester</td>
-                        <td rowspan="7"><b>JUT</b></td>
-                        <td rowspan="7"><b> GOVERNMENT POLYTECHNIC ADITYAPUR</b></td>
-                        <td>2024</td>
-                        <td>8.43</td>
-                        <td rowspan="7">8.60</td>
-                    </tr>
-                    <tr align="center">
-                        <td>2</td>
-                        <td>2<sup>nd</sup>Semester</td>
-                        <td>2024</td>
-                        <td>8.65</td>
-                    </tr>
-                    <tr align="center">
-                        <td>3</td>
-                        <td>3<sup>rd</sup>Semester</td>
-                        <td>2025</td>
-                        <td>8.75</td>
-                    </tr>
-                    <tr align="center">
-                        <td>4</td>
-                        <td>4<sup>th</sup>Semester</td>
-                        <td>2025</td>
-                        <td>8.54</td>
-                    </tr>
-                    <tr align="center">
-                        <td>5</td>
-                        <td>5<sup>th</sup>Semester</td>
-                        <td>---</td>
-                        <td>---</td>
-                    </tr>
-                    <tr align="center">
-                        <td>6</td>
-                        <td>6<sup>th</sup>Semester</td>
-                        <td>---</td>
-                        <td>---</td>
-                    </tr>
-                </table>
+            <span class="contact-label">Profiles</span>
+            <a href="https://linkedin.com/in/himanshu-raj-72846h" target="_blank">linkedin.com/in/himanshu-raj</a>
+            <a href="https://github.com/himanshu4362" target="_blank">github.com/himanshu4362</a>
+        </div>
 
-                <h3 class="col"><u>ONLINE INTERNSHIP</u></h3>
-                <table>
-                    <tr>
-                        <td>
-                            <h3>1. <u>Internship on Advance Python Programming</u></h3>
-                            <ul>
-                                <li><b>Organization: </b>TECHNOPHELIA Remote</li>
-                                <li><b>Duration: </b><u>May 2024 - July 2024</u></li>
-                                <li>Done the First internship from Technophilia on Advance python programming and made the strong command in Python programming.</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h3>2. <u>Full Stack Web Development</u></h3>
-                            <ul>
-                                <li><b>Organization: </b>RoboKwik, Remot</li>
-                                <li><b>Duration: </b><u>May 2025 - July 2025</u></li>
-                                <li>Second Internship I completed from Robokwik on Full Stackweb development and also worked on many Clones and mini rojects and made strong command in web designing.</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
+        <h3 class="section-title-sidebar">Technical Skills</h3>
+        <ul class="skills-list">
+            <li><b>Frontend</b> React.js, TypeScript, TailwindCSS</li>
+            <li><b>Mobile</b> Ionic, Capacitor</li>
+            <li><b>Backend</b> Node.js, Express.js, REST APIs</li>
+            <li><b>Realtime</b> WebSockets, WebRTC</li>
+            <li><b>Cloud</b> AWS EC2, S3, Route53, Server Deployment</li>
+            <li><b>Database</b> MongoDB, SQL</li>
+            <li><b>Tools</b> Docker, Git/GitHub</li>
+        </ul>
 
-                 <h3 class="col"><u>OFFLINE INTERNSHI (TRAINING)</u></h3>
-                <table>
-                    <tr>
-                        <td>
-                            <h3>1. <u>NATIVE MOBILE & WEB DEV WITH REACT</u></h3>
-                            <ul>
-                                <li><b>Organization: </b>KERANEXT TECHNOLOGIES, JSR</li>
-                                <li><b>Duration: </b>MARCH 2026 - ongoing</li>
-                                <li>learned React and native mobile app development with ionic, react and capacitor. For backend used Node js server.</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
+        <h3 class="section-title-sidebar">Certifications</h3>
+        <ul class="simple-list">
+            <li>Oracle OCI AI Foundations Associate</li>
+            <li>Advanced Python Programming</li>
+            <li>Full Stack Web Development</li>
+        </ul>
 
-                <h3 class="col"><u>PROJECTS:</u></h3>
-<table cellspacing="0" cellpadding="5" width="100%">
-    <tr>
-        <td>
-            <h3 style="margin-bottom: 2px; color: #014C83;"><u>Enterprise Cloud ERP for Educational Institutions (SaaS)</u></h3>
-            <p style="margin-top: 2px; font-size: 14px;"><b>Tech:</b> React.js, Ionic, Capacitor, TypeScript, Node.js, MongoDB, AWS S3</p>
-            <ul style="font-size: 14px; margin-top: 4px;">
-                <li>Architected a unified, production-oriented ERP platform providing end-to-end digital solutions for institutional management.</li>
-                <li>Engineered a strict finite-state custom <b>Workflow Engine</b> for the Admission Pipeline, handling everything from lead capture to final enrollment.</li>
-                <li>Developed a complex <b>Transactional Seat Matrix Engine</b> with dynamic category quotas (General/OBC/SC/ST) and "Seat Locking/Escrow" to ensure data integrity and prevent overbooking.</li>
-                <li>Integrated a highly secure <b>Document Vault</b> using AWS S3 presigned URLs, enabling encrypted uploads, real-time verification, and secure document handling for students and staff.</li>
-                <li>Implemented cross-platform mobile modules for Attendance, Gate-Pass, and Examination, featuring native capabilities like Biometric/Face Authentication and Geolocation using Ionic Capacitor.</li>
-                <li>Designed a clean, modular architecture supporting multi-role access (Admin, Teacher, Student) with integrated Finance, Library, and HR modules.</li>
+        <h3 class="section-title-sidebar">Hobbies</h3>
+        <ul class="simple-list">
+            <li>Chess</li>
+            <li>Fitness</li>
+            <li>Reading Non-fiction</li>
+            <li>Exploring New Technologies</li>
+        </ul>
+    </div>
+
+    <!-- ================= RIGHT CONTENT ================= -->
+    <div class="content">
+        
+        <div class="header">
+            <h1>HIMANSHU RAJ</h1>
+            <h2>Full-Stack Web & Mobile Developer</h2>
+        </div>
+
+        <p class="summary">
+            Full-Stack Web & Mobile Developer focused on building scalable real-world applications using React, Ionic, Node.js, and cloud infrastructure. Experienced in ERP architecture, realtime communication systems, and secure application workflows.
+        </p>
+
+        <!-- EXPERIENCE SECTION -->
+        <h3 class="section-title">Experience</h3>
+        <div class="project-item">
+            <div class="item-header">
+                <span class="item-title">React Developer Intern | Kera next Technology</span>
+                <span class="item-date">Feb 2026 - May 2026</span>
+            </div>
+            <ul class="bullet-points">
+                <li>Actively developed and maintained web and mobile applications using <b>React</b> and <b>Ionic Framework</b>.</li>
+                <li>Worked on UI component implementation, API integration, and performance optimization.</li>
             </ul>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <h3 style="margin-bottom: 2px; color: #014C83;">3. <u>ChatPro: Real-Time Communication Platform</u></h3>
-            <p style="margin-top: 2px; font-size: 14px;"><b>Tech:</b> React, Tailwind CSS, Node.js, Express, WebRTC, WebSockets</p>
-            <ul style="font-size: 14px; margin-top: 4px;">
-                <li>Built a full-featured real-time messaging application with a fully coupled backend and frontend.</li>
-                <li>Implemented bi-directional <b>WebRTC</b> for seamless Voice and Video calling features.</li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <h3 style="margin-bottom: 2px; color: #014C83;">4. <u>Personalized AI Assistant</u></h3>
-            <p style="margin-top: 2px; font-size: 14px;"><b>Tech:</b>Python, OpenCV, Ionic React, TailwindCSS</p>
-            <ul style="font-size: 14px; margin-top: 4px;">
-                <li>Collaborated to build an AI assistant capable of voice commands and executing tasks (calls, messages, media).</li>
-                <li>Integrated a native Face Authentication module using OpenCV for secure, biometric login.</li>
-            </ul>
-        </td>
-    </tr>
-</table>
+        </div>
 
-                <h3 class="col"><u>PERSONAL PROFILE:</u></h3>
-                <table width="100%" cellpadding="-5px">
-                    <tr>
-                        <td><b>Name</b></td>
-                        <td>: HIMANSHU RAJ</td>
-                    </tr>
-                    <tr>
-                        <td><b>Date of Birth </b></td>
-                        <td>: 30-07-2008</td>
-                    </tr>
-                    <tr>
-                        <td><b>Father's Name</b></td>
-                        <td>: RAJESH KUMAR SHARMA</td>
-                    </tr>
-                    <tr>
-                        <td><b>Mother's Name</b></td>
-                        <td>:  ANITA KUMARI</td>
-                    </tr>
-                    <tr>
-                        <td><b>Father's Occuption</b></td>
-                        <td>: HIGH SCHOOL TEACHER </td>
-                    </tr>
-                    <tr>
-                        <td><b>Gender</b></td>
-                        <td>: MALE</td>
-                    </tr>
-                    <tr>
-                        <td><b>Marital Status</b></td>
-                        <td>: UNMARRIED</td>
-                    </tr>
-                    <tr>
-                        <td><b>Langugage Known</b></td>
-                        <td>: HINDI & ENGLISH</td>
-                    </tr>
-                    <!-- <tr>
-                        <td><b>Nationality</b></td>
-                        <td>: INDIAN</td>
-                    </tr> -->
-                    <!-- <tr>
-                        <td><b>Blood Group</b></td>
-                        <td>: 0+</td>
-                    </tr> -->
-                </table>
-                <div id="spacearea">
-                </div>
-                <table cellspacing="0" width="100%">
-                    <tr>
-                        <td>
-                            <table>
-                                <!-- <tr>
-                                    <td>Date:-</td>
-                                    <td><p><span id="display-date"></span></p></td>
-                                </tr> -->
-                                <tr>
-                                    <td>Place:-</td>
-                                    <td>JAMSHEDPUR</td>
-                                </tr>
-                            </table>
-                        </td>
-                        <td>
-                            <table align="right">
-                                <tr>
-                                    <td><b>Signature:-</b></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="WhatsApp Image 2025-03-06 at 09.49.48_6135c1c0.jpg" height="40px" width="160px"
-                                            title="C:\Users\admin\Desktop\ sign.jpg" /></td>
-                                </tr>
-                            </table>
-                        </td>
+        <!-- PROJECTS SECTION -->
+        <h3 class="section-title">Projects</h3>
+        
+        <!-- HERO PROJECT -->
+        <div class="hero-project">
+            <div class="item-header">
+                <span class="item-title">Enterprise ERP & Admission Management Platform</span>
+            </div>
+            <div class="item-tech">React.js, TypeScript, Node.js, MongoDB, AWS S3, Redux Toolkit</div>
+            <ul class="bullet-points">
+                <li>Designed modular ERP architecture supporting multi-role workflows and scalable institutional operations.</li>
+                <li>Engineered a strict finite-state custom <b>Workflow Engine</b> controlling the Admission Pipeline, ensuring zero unauthorized data manipulation.</li>
+                <li>Developed a real-time <b>Transactional Seat Matrix Engine</b> handling dynamic quotas and "Seat Escrow" to prevent overbooking.</li>
+                <li>Integrated a highly secure <b>Document Vault</b> using AWS S3 presigned URLs for encrypted upload and verification of records.</li>
+            </ul>
+        </div>
 
-                    </tr>
-                </table>
-                <hr color="red" size="2px" noshade="noshade" />
-            </td>
-        </tr>
-    </table>
+        <!-- OTHER PROJECTS -->
+        <div class="project-item">
+            <div class="item-header">
+                <span class="item-title">ChatPro - Real-Time Communication Platform</span>
+            </div>
+            <div class="item-tech">React, TailwindCSS, Node.js, Express, WebRTC, WebSockets</div>
+            <ul class="bullet-points">
+                <li>Built a full-featured real-time messaging application with a tightly coupled backend and frontend architecture.</li>
+                <li>Implemented bi-directional <b>WebRTC</b> for seamless, low-latency Voice and Video calling functionality.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="item-header">
+                <span class="item-title">Personalized AI Assistant</span>
+            </div>
+            <div class="item-tech">Python, OpenCV, Ionic React, TailwindCSS</div>
+            <ul class="bullet-points">
+                <li>Collaborated to build an AI assistant capable of executing system tasks like calling and media control via voice commands.</li>
+                <li>Integrated a native <b>Face Authentication</b> module using OpenCV for secure, biometric logins.</li>
+            </ul>
+        </div>
+
+        <!-- EDUCATION SECTION -->
+        <h3 class="section-title">Education</h3>
+        <div class="project-item" style="margin-bottom: 12px;">
+            <div class="item-header">
+                <span class="item-title">Diploma in Computer Science & Engineering</span>
+                <span class="item-date">2023 - 2026</span>
+            </div>
+            <div style="font-size: 13.5px; color: #334155;">Government Polytechnic Adityapur (JUT) | <b>Score: 8.60 SGPA</b></div>
+        </div>
+        
+        <div class="project-item">
+            <div class="item-header">
+                <span class="item-title">10th Matriculation</span>
+                <span class="item-date">2023</span>
+            </div>
+            <div style="font-size: 13.5px; color: #334155;">High School Baddiha, Jamua (JAC Board) | <b>Score: 87.6%</b></div>
+        </div>
+
+    </div>
+</div>
+
 </body>
-<script>
-        function updateDate() {
-            const now = new Date();
-            
-            // Extracting day, month, and year
-            const dd = String(now.getDate()).padStart(2, '0');
-            const mm = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
-            const yyyy = now.getFullYear();
-
-            // Formatting as dd/mm/yyyy
-            const formattedDate = `${dd}/${mm}/${yyyy}`;
-
-            // Injecting into the HTML
-            document.getElementById('display-date').innerText = formattedDate;
-        }
-
-        // Run the function when the page loads
-        updateDate();
-    </script>
 </html>
