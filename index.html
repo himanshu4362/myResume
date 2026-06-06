@@ -3,6 +3,28 @@
 <head>
     <title>Resume</title>
     <style type="text/css">
+        /* Sidebar (Left column) ko thoda breath do */
+td[bgcolor="#014C83"] {
+    padding-top: 40px !important;
+}
+
+/* Photo ke niche ka gap */
+img[src="Profile photo.jpeg"] {
+    margin-bottom: 20px;
+    border: 3px solid white; /* Photo ko pop dene ke liye */
+}
+
+/* Right Content (Column) spacing */
+td[bgcolor="#F4F6F7"] {
+    padding-left: 40px !important;
+}
+
+/* Headers ka spacing fix */
+h3.hd1 {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
         .s1 {
             list-style: disc;
             color: white;
@@ -51,28 +73,36 @@
                 <table cellspacing="0">
                     <tr>
                         <td align="center">
-                            <img src="img.jpg" width="190px" 
+                            <img src="Profile photo.jpeg" width="190px" style="border-radius: 50%"
                                 title="HIMANSHU.jpg" alt="loading"/>
                         </td>
                     </tr>
+                    
                     <tr>
                         <td>
-                            <br />
-                            <h2 align="center" class="hd1">CONTACT</h2>
+                            <!-- <br />
                             <hr color="#FFF" size="2px" >
+                            <h3 class="hd1"><u>Contact Me:</u></h3>
+                            
+                            <h3 class="hd1">Phone: 6202739979</h3>
+                            <a href="tel:6202739979" id="tx1"></a>
 
-                            <h3 class="hd1">Address:</h3>
+                            <h3 class="hd1">Email:</h3>
+                            <a href="himanshu72846@gmail.com?subject=Query">himanshu72846@gmail.com</a> -->
+
+
+                            <!-- <h3 class="hd1">Address:</h3>
                             <table class="tb1">
                                 <tr>
                                     <td>VILL:-</td>
-                                    <td>RAJDHANWAR</td>
+                                    <td>SAPAMARAN</td>
                                 </tr>
                                 <tr>
                                     <td>PO:-</td>
                                     <td>SAPAMARAN</td>
                                 </tr>
                                 <tr>
-                                    <td>PS:-</td>
+                                    <td>CITY:-</td>
                                     <td>RAJDHANWAR</td>
                                 </tr>
                                 <tr>
@@ -83,33 +113,66 @@
                                     <td>DIST:-</td>
                                     <td>GIRIDIH(JHARKHAND)</td>
                                 </tr>
-                            </table>
+                            </table> -->
 
-                            <h3 class="hd1">Phone:</h3>
-                            <p><a href="tel:969xxxx6194" id="tx1">6202739979</a></p>
+                            <hr color="#FFF" size="2px" >
 
-                            <h3 class="hd1">Email:</h3>
-                            <p><a href="mitxxxx3376194@gmail.com?subject=Query">himanshu72846@gmail.com</a></p>
+                            <!-- <h3 class="hd1"><U>Online Profiles:</U></h3>
+                            <ul class="s1">
+                                <li><h4>LinkedIn:</h4><a href="www.linkedin.com/in/himanshu-raj-72846h">www.linkedin.com/in/himanshu-raj-72846h</a></li>
+                                <li><h4>GitHub:</h4><a href="github.com/himanshu4362">github.com/himanshu4362</a></li>
+                            </ul> -->
 
+                             <h3 class="hd1"><u>Technical Skills:</u></h3>
+                            <ul class="s1">
+                                <li style="margin-bottom: 8px;"><b>Frontend & Mobile:</b> React.js, TypeScript, Ionic, Capacitor, Tailwind CSS</li>
+                                <li style="margin-bottom: 8px;"><b>Backend:</b> Node.js, Express.js, REST APIs, JWT</li>
+                                <li style="margin-bottom: 8px;"><b>Database:</b> MongoDB Atlas, Mongoose, SQL</li>
+                                <li style="margin-bottom: 8px;"><b>Cloud & Tools:</b> AWS EC2, S3 (Presigned URLs), Route 53,  Docker, Git/GitHub, Vercel, Netlify, Render, CI/CD pipeline</li>
+                                <li style="margin-bottom: 8px;"><b>Core Concepts:</b> System Architecture, WebSockets, WebRTC, OOP</li>
+                            </ul>
+                            
                             <hr size="2px" color="#FFF" />
                             <h3 class="hd1"><u>Hobbies:</u></h3>
                             <ul class="s1">
-                                <li>CHESS</li>
-                                <li>COOKING</li>
-                                <li>TRAVELLING</li>
-                                <LI>PLAYING CRICKET</LI>
+                                <li>Playing Chess</li>
+                                <li>Cooking</li>
+                                <li>Calisthenics and home-based fitness</li>
+                                <li>Playing Badminton</li>
+                                <LI>Reading non-fiction and self-development books</LI>
+                                <li>Interest in human psychology and behavioral science</li>
+                                <li>Exploring new technologies and building software project</li>
                             </ul>
 
                             <hr size="2px" color="#FFF" />
 
-                            <h3 class="hd1"><u>Soft Skill:</u></h3>
+                            <h3 class="hd1"><u>Soft Skills:</u></h3>
                             <ul class="s1">
-                                <li>LEADERSHIP SKILL</li>
-                                <LI>ADAPTIVE NATURE</LI>
-                                <li>GOOD COMMUNICATION SKILL</li>
+                                <li>Leadership Development Skills</li>
+                                <LI>Adaptive Nature</LI>
+                                <li>Good Communication Skill</li>
+                                <li>Punctual</li>
+                                <li>Self Motivated</li>
+                                <li>Decision Making</li>
 
                             </ul>
-                            <h3 class="hd1">Strength:</h3>
+                            <br>
+                            <!-- <h3 class="hd1"><u>Technical Skills:</u></h3>
+                            <ul class="s1">
+                                <li>Python, java</li>
+                                <li>Full stack development and CI/CD pipeline.</li>
+                                <li>Frontend tech stack - React, html, css, js, tailwind.</li>
+                                <li>Backend (PHP , Node.js ,Express, MongoDB, SQL, WebSockets, WebRTC).</li>
+                                <li>Native App Development development (React, Ionic, Capacitor)</li>
+                                <li>Worked experience of <b>AWS</b> server and serverless (EC2 & Lambda), object storage AWS (Bucket), DNS Management (Route 53), good experience of remote server management.</li>
+                                <li>Strong Command on Computer networks, CHMA and other CS subjects</li>
+
+                            </ul> -->
+
+                           
+
+                            
+                            <h3 class="hd1"><U>Strengths:</U></h3>
                                 <ul class="s1">
                                     <li>PUNCTUAL</1i>
                                     <li>SELF MOTIVATED</li>
@@ -126,17 +189,20 @@
                 </table>
             </td>
             <td width="70%" valign="top" bgcolor="#F4F6F7">
-                <p class="col1">HIMANSHU RAJ</p>
+                <P class="col1">HIMANSHU RAJ</p>
+                <P>full-Stack Web & Mobile Developer</P>
                 <p class="col">COMPUTER SCIENCE & ENGINEERING</p>
+                <p>Jamshedpur, Jharkhand | 6202739979 | himanshu72846@gmail.com</p>
+                <p>LinkedIn: linkedin.com/in/himanshu-raj-72846h | GitHub: github.com/himanshu4362</p>
                 <hr color="blue" size="2px" />
-                <h3 class="col"><u>PROFILE</u></h3>
-                <p> To obtain a challenging position that provides me opportunity to reach my full potential and where I
-                    can use my abilities , can learn new skills and can grow with the success and development of the
-                    company/organisation. </p>
+                <h3 class="col"><u>Professional Summary</u></h3>
+                <p>Results-driven Full-Stack Web & Mobile Developer (MERN Stack, Ionic/Capacitor) in the final year of a Computer Science Diploma. Specialized in architecting scalable, enterprise-grade applications, cross-platform mobile solutions, and integrating cloud services (AWS). Passionate about writing clean, type-safe code and building real-world automation systems.</p>
                 <hr color="black" size="1px" />
+                
+                
 
-                <h3 class="col"><u>EDUCATIONAL QUALIFICATION></u></h3>
-                <table border="2px" cellspacing="0" width="100%">
+                <h3 class="col"><u>EDUCATIONAL QUALIFICATION</u></h3>
+                <!-- <table border="2px" cellspacing="0" width="100%">
                     <tr align="center">
                         <th>S.No</th>
                         <th>Class</th>
@@ -149,12 +215,19 @@
                         <td>1.</td>
                         <td>10<sup>th</sup></td>
                         <td>JAC</td>
-                        <td>S.D MEMORIAL ACADEMY</td>
+                        <td>HIGH SCHOOL BADDIHA, JAMUA</td>
                         <td>2023</td>
                         <td>87.6%</td>
                     </tr>
     
-                </table>
+                </table> -->
+                <ul>
+                <li>10th Matriculation | High School Baddiha, Jamua (JAC Board) | 2023 | 87.6%</li>
+                <!-- <li>Diploma in Computer Science & Engineering | Government Polytechnic Adityapur, Jamshedpur | 2023 - 2026 | Aggregate: 79.33% (Up to 5th Sem)</li> -->
+                </ul>
+                
+
+
                 <h3 class="col"><u>TECHNICAL QUALIFICATION</u></h3>
                 <p>Pursuing Diploma in<b> COMPUTER SCIENCE & ENGINEERING </b> from<b> GOVERNMENT POLYTECHNIC ADITYAPUR</b>
                     (JAMSHEDPUR)<b> (2023-2026)</b></p>
@@ -165,7 +238,7 @@
                         <th>Board/University</th>
                         <th>Institute</th>
                         <th>Year of Passing</th>
-                        <th>Percentage of Marks</th>
+                        <th>SGPA</th>
                         <th>Average of Marks</th>
                     </tr>
                     <tr align="center">
@@ -174,26 +247,26 @@
                         <td rowspan="7"><b>JUT</b></td>
                         <td rowspan="7"><b> GOVERNMENT POLYTECHNIC ADITYAPUR</b></td>
                         <td>2024</td>
-                        <td>78.00%</td>
-                        <td rowspan="7">79.33</td>
+                        <td>8.43</td>
+                        <td rowspan="7">8.60</td>
                     </tr>
                     <tr align="center">
                         <td>2</td>
                         <td>2<sup>nd</sup>Semester</td>
                         <td>2024</td>
-                        <td>80.53</td>
+                        <td>8.65</td>
                     </tr>
                     <tr align="center">
                         <td>3</td>
                         <td>3<sup>rd</sup>Semester</td>
                         <td>2025</td>
-                        <td>79.46</td>
+                        <td>8.75</td>
                     </tr>
                     <tr align="center">
                         <td>4</td>
                         <td>4<sup>th</sup>Semester</td>
-                        <td>---</td>
-                        <td>---</td>
+                        <td>2025</td>
+                        <td>8.54</td>
                     </tr>
                     <tr align="center">
                         <td>5</td>
@@ -213,21 +286,77 @@
                 <table>
                     <tr>
                         <td>
+                            <h3>1. <u>Internship on Advance Python Programming</u></h3>
                             <ul>
-                                <li><b>ORGANIZATION:- TECHNOPHELIA </b></li>
-                                <li><B>COURSE:-</b>&nbsp&nbsp  ADVANCE PYTHON PROGRAMMING</li>
+                                <li><b>Organization: </b>TECHNOPHELIA Remote</li>
+                                <li><b>Duration: </b><u>May 2024 - July 2024</u></li>
+                                <li>Done the First internship from Technophilia on Advance python programming and made the strong command in Python programming.</li>
                             </ul>
                         </td>
                     </tr>
                     <tr>
                         <td>
+                            <h3>2. <u>Full Stack Web Development</u></h3>
                             <ul>
-                                <li><b>ORGANIZATION:- RoboKwik </b></li>
-                                <li><B>COURSE:- </b>Full stack web development</li>
+                                <li><b>Organization: </b>RoboKwik, Remot</li>
+                                <li><b>Duration: </b><u>May 2025 - July 2025</u></li>
+                                <li>Second Internship I completed from Robokwik on Full Stackweb development and also worked on many Clones and mini rojects and made strong command in web designing.</li>
                             </ul>
                         </td>
                     </tr>
                 </table>
+
+                 <h3 class="col"><u>OFFLINE INTERNSHI (TRAINING)</u></h3>
+                <table>
+                    <tr>
+                        <td>
+                            <h3>1. <u>NATIVE MOBILE & WEB DEV WITH REACT</u></h3>
+                            <ul>
+                                <li><b>Organization: </b>KERANEXT TECHNOLOGIES, JSR</li>
+                                <li><b>Duration: </b>MARCH 2026 - ongoing</li>
+                                <li>learned React and native mobile app development with ionic, react and capacitor. For backend used Node js server.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+
+                <h3 class="col"><u>PROJECTS:</u></h3>
+<table cellspacing="0" cellpadding="5" width="100%">
+    <tr>
+        <td>
+            <h3 style="margin-bottom: 2px; color: #014C83;"><u>Enterprise Cloud ERP for Educational Institutions (SaaS)</u></h3>
+            <p style="margin-top: 2px; font-size: 14px;"><b>Tech:</b> React.js, Ionic, Capacitor, TypeScript, Node.js, MongoDB, AWS S3</p>
+            <ul style="font-size: 14px; margin-top: 4px;">
+                <li>Architected a unified, production-oriented ERP platform providing end-to-end digital solutions for institutional management.</li>
+                <li>Engineered a strict finite-state custom <b>Workflow Engine</b> for the Admission Pipeline, handling everything from lead capture to final enrollment.</li>
+                <li>Developed a complex <b>Transactional Seat Matrix Engine</b> with dynamic category quotas (General/OBC/SC/ST) and "Seat Locking/Escrow" to ensure data integrity and prevent overbooking.</li>
+                <li>Integrated a highly secure <b>Document Vault</b> using AWS S3 presigned URLs, enabling encrypted uploads, real-time verification, and secure document handling for students and staff.</li>
+                <li>Implemented cross-platform mobile modules for Attendance, Gate-Pass, and Examination, featuring native capabilities like Biometric/Face Authentication and Geolocation using Ionic Capacitor.</li>
+                <li>Designed a clean, modular architecture supporting multi-role access (Admin, Teacher, Student) with integrated Finance, Library, and HR modules.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3 style="margin-bottom: 2px; color: #014C83;">3. <u>ChatPro: Real-Time Communication Platform</u></h3>
+            <p style="margin-top: 2px; font-size: 14px;"><b>Tech:</b> React, Tailwind CSS, Node.js, Express, WebRTC, WebSockets</p>
+            <ul style="font-size: 14px; margin-top: 4px;">
+                <li>Built a full-featured real-time messaging application with a fully coupled backend and frontend.</li>
+                <li>Implemented bi-directional <b>WebRTC</b> for seamless Voice and Video calling features.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3 style="margin-bottom: 2px; color: #014C83;">4. <u>Personalized AI Assistant</u></h3>
+            <p style="margin-top: 2px; font-size: 14px;"><b>Tech:</b>Python, OpenCV, Ionic React, TailwindCSS</p>
+            <ul style="font-size: 14px; margin-top: 4px;">
+                <li>Collaborated to build an AI assistant capable of voice commands and executing tasks (calls, messages, media).</li>
+                <li>Integrated a native Face Authentication module using OpenCV for secure, biometric login.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
 
                 <h3 class="col"><u>PERSONAL PROFILE:</u></h3>
                 <table width="100%" cellpadding="-5px">
@@ -263,14 +392,14 @@
                         <td><b>Langugage Known</b></td>
                         <td>: HINDI & ENGLISH</td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td><b>Nationality</b></td>
                         <td>: INDIAN</td>
-                    </tr>
-                    <tr>
+                    </tr> -->
+                    <!-- <tr>
                         <td><b>Blood Group</b></td>
                         <td>: 0+</td>
-                    </tr>
+                    </tr> -->
                 </table>
                 <div id="spacearea">
                 </div>
@@ -278,10 +407,10 @@
                     <tr>
                         <td>
                             <table>
-                                <tr>
+                                <!-- <tr>
                                     <td>Date:-</td>
-                                    <td>06/03/2025</td>
-                                </tr>
+                                    <td><p><span id="display-date"></span></p></td>
+                                </tr> -->
                                 <tr>
                                     <td>Place:-</td>
                                     <td>JAMSHEDPUR</td>
@@ -307,5 +436,23 @@
         </tr>
     </table>
 </body>
+<script>
+        function updateDate() {
+            const now = new Date();
+            
+            // Extracting day, month, and year
+            const dd = String(now.getDate()).padStart(2, '0');
+            const mm = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+            const yyyy = now.getFullYear();
 
+            // Formatting as dd/mm/yyyy
+            const formattedDate = `${dd}/${mm}/${yyyy}`;
+
+            // Injecting into the HTML
+            document.getElementById('display-date').innerText = formattedDate;
+        }
+
+        // Run the function when the page loads
+        updateDate();
+    </script>
 </html>
